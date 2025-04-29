@@ -1,0 +1,3 @@
+Ke kreirate 4 useri so atributi {ime,prezime,adresa,godini} vo App.jsx fajlot definirani kako varijabli
+koristejki props vo 2 posebni fajla ke gi prefrlite userite vo edniot fajl (Age.jsx) ke gi prikazete userite koi se postari od 18 god za ostanatite ke prikazete paragraf "Less then 18", vo drugiot fajl  (Address.jsx) ke gi prikazete userite koi imaat adresa Skopje.
+**Atributite na userite gi zadavate vie
