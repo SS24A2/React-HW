@@ -1,0 +1,134 @@
+body {
+    box-sizing: border-box;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.movie-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-boxes img {
+    width: 300px;
+    height: 419px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.movie-box {
+    flex: 0 1 500px;
+    background-color: rgb(138, 174, 167);
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+.img-wraper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-title {
+    font-size: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.movie-box a {
+    text-decoration: none;
+}
+
+.genre-all {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.genre {
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.movie-plot {
+    padding: 20px;
+    text-align: justify;
+    margin-top: 0;
+    height: 60px;
+}
+
+.director,
+.cast {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 5px 20px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    max-width: 400px;
+    margin: auto;
+}
+
+
+.director span:nth-child(1),
+.cast>span {
+    font-weight: 700;
+}
+
+.star {
+    color: rgb(47, 47, 145);
+    font-weight: 600;
+    margin: 1px 10px;
+}
+
+.stars {
+    margin-left: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.director span:nth-child(2) {
+    color: rgb(47, 47, 145);
+    font-weight: 600;
+    margin: 1px 8px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.movie-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    max-width: 300px;
+    margin: auto;
+}
+
+.movie-info p {
+    margin: 2px;
+}
+
+.cast {
+    height: 60px;
+}
