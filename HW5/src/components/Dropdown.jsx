@@ -1,17 +1,15 @@
-export default function Dropdown({ options, title, selection, setSelection }) {
+export default function Dropdown({ options, placeholder, setSelection }) {
     return (
         <select
-            defaultValue={title}
+            defaultValue={placeholder}
             style={{ width: 150 }}
             onChange={(e) => {
-                console.log(e.target.value)
-                console.log(selection)
                 setSelection(e.target.value)
             }}
         >
-            <option disabled>{title}</option>
+            <option disabled>{placeholder}</option>
             {options.map((object, i) => (
-                <option key={i} name={object.name} value={object.value}>
+                <option key={i} value={object.value}>
                     {object.value}
                 </option>
             ))}

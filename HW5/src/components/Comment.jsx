@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { useState } from 'react'
 
 export default function Comment({ comment, setComment }) {
@@ -8,7 +7,11 @@ export default function Comment({ comment, setComment }) {
         <p>
             {!isMultiline ? (
                 <input
-                    style={{ marginTop: 15, marginBottom: 10 }}
+                    style={{
+                        marginTop: 15,
+                        marginBottom: 10,
+                        position: 'relative',
+                    }}
                     type="text"
                     placeholder="Enter comment"
                     value={comment}
@@ -18,7 +21,12 @@ export default function Comment({ comment, setComment }) {
                 />
             ) : (
                 <textarea
-                    style={{ resize: 'none', marginTop: 10, marginBottom: 5 }}
+                    style={{
+                        resize: 'none',
+                        marginTop: 10,
+                        marginBottom: 5,
+                        position: 'relative',
+                    }}
                     rows="4"
                     cols="26"
                     placeholder="Enter comment"
@@ -28,17 +36,24 @@ export default function Comment({ comment, setComment }) {
                     }}
                 />
             )}
-            {!isMultiline && (
-                <button
-                    style={{ cursor: 'pointer' }}
-                    type="button"
-                    onClick={() => {
-                        setIsMultiline(true)
-                    }}
-                >
-                    <i className="fa fa-expand"></i>
-                </button>
-            )}
+            <button
+                style={{
+                    cursor: 'pointer',
+                    position: 'absolute',
+                    bottom: 12,
+                    right: 1,
+                    border: 'none',
+                    backgroundColor: 'white',
+                }}
+                type="button"
+                onClick={() => {
+                    setIsMultiline(!isMultiline)
+                }}
+            >
+                <i
+                    className={!isMultiline ? 'fa fa-expand' : 'fa fa-compress'}
+                ></i>
+            </button>
         </p>
     )
 }

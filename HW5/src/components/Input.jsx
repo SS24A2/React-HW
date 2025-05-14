@@ -4,7 +4,9 @@ export default function Input({
     value,
     onChange,
     name,
-    setType,
+    onMouseUp,
+    onMouseDown,
+    onClick,
 }) {
     return (
         <p>
@@ -13,21 +15,11 @@ export default function Input({
                 placeholder={placeholder}
                 value={value}
                 onChange={onChange}
-                onMouseUp={() => {
-                    name === 'password' && setType('password')
-                }}
-                onMouseDown={() => {
-                    name === 'password' && setType('text')
-                }}
+                onMouseUp={onMouseUp}
+                onMouseDown={onMouseDown}
             />
             {name === 'password' && (
-                <button
-                    className="eye-button"
-                    type="button"
-                    onClick={() => {
-                        setType(type === 'password' ? 'text' : 'password')
-                    }}
-                >
+                <button className="eye-button" type="button" onClick={onClick}>
                     <i
                         className={
                             type === 'password'

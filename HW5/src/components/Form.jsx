@@ -21,7 +21,7 @@ export default function Form() {
         console.log(
             `username: ${username} password:${password} media: ${dropdownSelection} comment:${comment} `
         )
-    }, [username, password])
+    }, [username, password, dropdownSelection, comment])
 
     return (
         <div id="login">
@@ -43,18 +43,25 @@ export default function Form() {
                 />
                 <Input
                     type={type}
-                    setType={setType}
                     name="password"
                     placeholder="Enter password"
                     value={password}
                     onChange={(e) => {
                         setPassword(e.target.value)
                     }}
+                    onMouseUp={() => {
+                        setType('password')
+                    }}
+                    onMouseDown={() => {
+                        setType('text')
+                    }}
+                    onClick={() => {
+                        setType(type === 'password' ? 'text' : 'password')
+                    }}
                 />
                 <Dropdown
                     options={elements}
-                    title={'Select social media'}
-                    selection={dropdownSelection}
+                    placeholder={'Select social media'}
                     setSelection={setDropdownSelection}
                 />
                 <Comment comment={comment} setComment={setComment} />
