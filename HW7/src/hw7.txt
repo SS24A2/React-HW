@@ -1,0 +1,5 @@
+Nov proekt so setup na router i 2 komponenti
+za Posts fetchot da se napravi vo App.jsx
+(Obicen tabelaren prikaz na propertijata na postovite)
+i Todos fectchot da se napravi vo samata komponenta
+(checkbox lista na elementi so OnChange handler na vrednosta zemena od https://jsonplaceholder.typicode.com/todos)
