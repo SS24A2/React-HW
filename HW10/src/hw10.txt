@@ -1,0 +1,1 @@
+da se dodade vo kodot od casot nova componenta so novi reducer i actions fajlovi so minimum 2 akcii
